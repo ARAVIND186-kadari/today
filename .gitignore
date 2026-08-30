@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Next.js Build Output & Caches
+client/.next/
+client/out/
+client/build/
+.next/
+out/
+build/
+dist/
+
+# Environment Variables & Secrets (CRITICAL: Never commit to Git)
+.env
+.env.*
+*.env
+server/.env
+server/.env.local
+server/.env.*
+client/.env
+client/.env.local
+client/.env.*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.pem
+.vscode/
+.idea/
+*.swp
+*.swo

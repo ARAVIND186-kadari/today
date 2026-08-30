@@ -1,0 +1,19 @@
+{
+  "name": "agentflow-ai",
+  "version": "1.0.0",
+  "description": "Agentic AI Automation Platform (Agentflow_AI)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "start:server": "npm --prefix server start",
+    "start:client": "npm --prefix client start",
+    "build:client": "npm --prefix client run build",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

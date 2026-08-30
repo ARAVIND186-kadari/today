@@ -1,0 +1,57 @@
+@import '@xyflow/react/dist/style.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-slate-950;
+  }
+}
+
+/* Custom Scrollbar for console feeds */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom React Flow styling */
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #38bdf8 !important;
+  border: 2px solid #0f172a !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2 !important;
+}
+
+.react-flow__edge.animated path {
+  stroke: #38bdf8 !important;
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
