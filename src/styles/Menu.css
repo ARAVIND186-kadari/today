@@ -1,0 +1,220 @@
+/* Menu Section Styling */
+.menu-section {
+  background: var(--bg-primary);
+  position: relative;
+}
+
+/* Filter and Search Bar Controls */
+.menu-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.menu-search-and-diet-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Search Input */
+.menu-search-box {
+  position: relative;
+  flex-grow: 1;
+  max-width: 480px;
+}
+
+.menu-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  pointer-events: none;
+}
+
+.menu-search-input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+.menu-search-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+  background: var(--bg-secondary);
+}
+
+.menu-search-clear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+}
+.menu-search-clear:hover {
+  color: var(--text-white);
+}
+
+/* Diet Toggle Buttons (All / Veg / Non-Veg) */
+.menu-diet-toggles {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  gap: 4px;
+}
+
+.diet-toggle-btn {
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.diet-toggle-btn.active {
+  background: var(--bg-elevated);
+  color: var(--text-white);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.diet-toggle-btn.active.veg-active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border-color: var(--veg);
+}
+
+.diet-toggle-btn.active.nonveg-active {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border-color: var(--nonveg);
+}
+
+/* Category Filter Tabs */
+.menu-category-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.category-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.category-tab-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold);
+  color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.category-tab-btn.active {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+  border-color: transparent;
+  color: #0b0c10;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+}
+
+/* Category Results Meta & Grid */
+.menu-results-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Empty State */
+.menu-empty-state {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-xl);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.menu-empty-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin: 0 auto 1.25rem auto;
+}
+
+.menu-empty-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-empty-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .menu-category-tabs {
+    justify-content: flex-start;
+    padding: 0.25rem;
+  }
+  .category-tab-btn {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .menu-search-and-diet-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .menu-search-box {
+    max-width: 100%;
+  }
+}

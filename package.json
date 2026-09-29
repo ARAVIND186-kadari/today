@@ -1,19 +1,24 @@
 {
-  "name": "agentflow-ai",
-  "version": "1.0.0",
-  "description": "Agentic AI Automation Platform (Agentflow_AI)",
+  "name": "spice-route-restaurant",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "start:server": "npm --prefix server start",
-    "start:client": "npm --prefix client start",
-    "build:client": "npm --prefix client run build",
-    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
-    "test": "npm --prefix server test"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.1.0"
   }
 }
